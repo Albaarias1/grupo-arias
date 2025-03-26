@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grupo Arias</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* Base y tipografía */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #474747, #1e1c55);
+      color: #fcfcfc;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      font-family: 'Merriweather', serif;
+    }
+    /* Cabecera y navegación sticky */
+    header {
+      background-color: #000;
+      color: #fefefe;
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      opacity: 0.95;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #000;
+    }
+    nav a {
+      color: #fcfcfc;
+      text-decoration: none;
+      padding: 15px 20px;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #d4af37; /* acento dorado sutil */
+    }
+    /* Secciones y contenedores */
+    section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .about h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .about img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto 20px;
+      cursor: pointer;
+    }
+    .about p {
+      text-align: justify;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    /* Tarjetas y efectos */
+    .card {
+      background-color: #0a0216;
+      border: 1px solid #f8f6f6;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+    /* Para imágenes horizontales (Acento y Soledad) */
+    .card.horizontal {
+      max-width: 350px;
+      margin: 0 auto;
+    }
+    /* Nueva clase para restringir el ancho de las cajas Enlaces y Líneas */
+    .card.narrow {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+    /* Footer refinado */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .social-icons a {
+      color: #fcfcfc;
+      margin: 0 10px;
+      font-size: 1.2em;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #d4af37;
+    }
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 200;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 80%;
+      max-height: 80%;
+    }
+    .modal-close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Estudio Arias</h1>
+  </header>
+  <nav>
+    <a href="#about">Sobre la Autora</a>
+    <a href="#posters">Carteles</a>
+    <a href="#photos">Fotografías</a>
+  </nav>
+
+  <!-- Sección "Sobre la Autora" -->
+  <section id="about" class="about">
+    <h2>Sobre la Autora</h2>
+    <img src="IMA/ALBA ARIAS.jpeg" alt="Imagen de la Autora" class="enlargeable" loading="lazy">
+    <p>
+      Alba Arias es una talentosa fotógrafa de producto y diseñadora visual, con una destacada formación académica en fotografía, diseño visual y publicidad por la Universidad Autónoma de la Ciudad de México. Su pasión por capturar la esencia y belleza de los productos, resaltando sus características únicas, la posiciona como una profesional comprometida con la excelencia y la innovación.
+      <br><br>
+      A lo largo de su carrera, Alba ha participado en diversos concursos de fotografía y diseño, incluyendo el reconocido Festival Internacional de la Imagen (FINI), así como en concursos de carteles tanto nacionales como internacionales. Estos logros reflejan su dedicación y su capacidad para destacar en ámbitos altamente competitivos, consolidando su reputación como una creativa excepcional.
+      <br><br>
+      Uno de los puntos culminantes de su trayectoria fue su colaboración con BDM Home, donde, además de encargarse de la fotografía de productos, contribuyó a la estrategia de marca en redes sociales y sitios web. Su capacidad para fusionar creatividad visual con estrategias digitales permitió el fortalecimiento de la identidad visual de la marca y su impacto en el entorno digital.
+      <br><br>
+      El estilo fotográfico de Alba se caracteriza por su meticulosa atención al detalle y su habilidad para contar historias visuales. Inspirada en los conceptos de Roland Barthes, busca enfocar su mirada en lo cotidiano, transformándolo a través de una observación única y una perspectiva renovada. Ya sea un elegante reloj, un exquisito platillo o un innovador gadget, Alba sabe resaltar lo mejor de cada objeto mediante su dominio de la iluminación, la composición y su enfoque artístico.
+      <br><br>
+      En el ámbito digital, Alba ha demostrado su destreza al crear identidades visuales coherentes y atractivas para diversas marcas. Desde la elección de paletas de colores hasta la selección de tipografías, su enfoque integral asegura una imagen de marca sólida y armoniosa en todas las plataformas.
+      <br><br>
+      Arias es sinónimo de pasión, creatividad y compromiso. Su lema, "La creatividad es la base de la atracción", refleja su creencia en el poder transformador del arte visual, no solo para embellecer los productos, sino también para impulsar el éxito de las marcas que confían en su talento.
+    </p>
+  </section>
+
+  <!-- Sección de Carteles -->
+  <section id="posters">
+    <h2>Carteles</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="IMA/RAICES .png" alt="Raíces" class="enlargeable" loading="lazy">
+        <p>Raíces</p>
+      </div>
+      <div class="card">
+        <img src="IMA/RESISTENCIA QUE FLORECE.jpg" alt="Resistencia que Florece" class="enlargeable" loading="lazy">
+        <p>Resistencia que Florece</p>
+      </div>
+      <div class="card">
+        <img src="IMA/sembrando libertad y dignidad.jpg" alt="Sembrando Libertad y Dignidad" class="enlargeable" loading="lazy">
+        <p>Sembrando Libertad y Dignidad</p>
+      </div>
+      <div class="card">
+        <img src="IMA/GUERRERAS DE JUSTICIA.png" alt="Guerreras de Justicia" class="enlargeable" loading="lazy">
+        <p>Guerreras de Justicia</p>
+      </div>
+      <div class="card">
+        <img src="IMA/escencia que permanece.jpg" alt="Esencia que Permanece" class="enlargeable" loading="lazy">
+        <p>Esencia que Permanece</p>
+      </div>
+      <div class="card">
+        <img src="IMA/Germen de paz.png" alt="Germen de Paz" class="enlargeable" loading="lazy">
+        <p>Germen de Paz</p>
+      </div>
+      <div class="card">
+        <img src="IMA/CARTEL TEUCHITLÁN.jpg" alt="Cartel Teuchitlán" class="enlargeable" loading="lazy">
+        <p>Cartel Teuchitlán</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Fotografías -->
+  <section id="photos">
+    <h2>Fotografías</h2>
+    <div class="grid">
+      <!-- Tarjetas iniciales -->
+      <div class="card">
+        <img src="IMA/Núcleo de cambio.jpg" alt="Núcleo de Cambio" class="enlargeable" loading="lazy">
+        <p>Núcleo de Cambio</p>
+      </div>
+      <div class="card">
+        <img src="IMA/Entre la tradición y la lucha-Caminos de una Mujer_arias.jpg" alt="Entre la Tradición y la Lucha - Caminos de una Mujer" class="enlargeable" loading="lazy">
+        <p>Entre la Tradición y la Lucha - Caminos de una Mujer</p>
+      </div>
+      <div class="card">
+        <img src="IMA/Rebelde en el corazón urbano.jpg" alt="Rebelde en el Corazón Urbano" class="enlargeable" loading="lazy">
+        <p>Rebelde en el Corazón Urbano</p>
+      </div>
+      <div class="card">
+        <img src="IMA/Escencias de la naturaleza.jpg" alt="Esencias de la Naturaleza" class="enlargeable" loading="lazy">
+        <p>Esencias de la Naturaleza</p>
+      </div>
+      <div class="card">
+        <img src="IMA/microcosmos 1.jpeg" alt="Microcosmos 1" class="enlargeable" loading="lazy">
+        <p>Microcosmos 1</p>
+      </div>
+      <div class="card">
+        <img src="IMA/126.jpeg" alt="126" class="enlargeable" loading="lazy">
+        <p>126</p>
+      </div>
+      <div class="card">
+        <img src="IMA/Acompañame.jpeg" alt="Acompañame" class="enlargeable" loading="lazy">
+        <p>Acompañame</p>
+      </div>
+      <div class="card">
+        <img src="IMA/Dualidad.jpeg" alt="Dualidad" class="enlargeable" loading="lazy">
+        <p>Dualidad</p>
+      </div>
+      <!-- Para Enlaces y Líneas, aplicamos la clase narrow para limitar el ancho -->
+      <div class="card narrow">
+        <img src="IMA/Líneas.jpeg" alt="Líneas" class="enlargeable" loading="lazy">
+        <p>Líneas</p>
+      </div>
+      <div class="card">
+        <img src="IMA/Momentos.jpeg" alt="Momentos" class="enlargeable" loading="lazy">
+        <p>Momentos</p>
+      </div>
+      <div class="card">
+        <img src="IMA/Espinas.jpeg" alt="Espinas" class="enlargeable" loading="lazy">
+        <p>Espinas</p>
+      </div>
+      <!-- Últimas tres: Acento, Soledad y Enlances -->
+      <div class="card horizontal">
+        <img src="IMA/Acento.jpeg" alt="Acento" class="enlargeable" loading="lazy">
+            <p>Acento</p>
+        </div>
+        <div class="card horizontal">
+            <img src="IMA/Enlaces.jpeg" alt="Enlaces" class="enlargeable" loading="lazy">
+            <p>Enlaces</p>
+          </div>
+        <div class="card horizontal">
+            <img src="IMA/soledad.jpeg" alt="Soledad" class="enlargeable" loading="lazy">
+            <p>Soledad</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer con iconos sociales -->
+  <footer>
+    <p>&copy; 2025 Grupo Arias</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/albaarias1?igsh=bnV2NzNzdXBzMWI5" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.flickr.com/photos/190197891@N02/" target="_blank" aria-label="Flickr">
+        <i class="fab fa-flickr"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Modal para ampliar imágenes -->
+  <div id="imageModal" class="modal">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modalImage" alt="Imagen ampliada">
+  </div>
+
+  <script>
+    // Funcionalidad para ampliar imágenes al hacer clic
+    document.querySelectorAll('.enlargeable').forEach(img => {
+      img.addEventListener('click', function() {
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        modal.style.display = "block";
+        modalImg.src = this.src;
+      });
+    });
+
+    // Cerrar modal
+    document.querySelector('.modal-close').addEventListener('click', function() {
+      document.getElementById('imageModal').style.display = "none";
+    });
+  </script>
+</body>
+</html>
